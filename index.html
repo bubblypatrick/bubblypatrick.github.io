@@ -18,7 +18,7 @@
     <!-- nav -->
         <div class="container-fullwidth">
             <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-                <a class="navbar-brand text-light font-weight-bold text-monospace" href="#"><h1>Patrick Champagne</h1></a>
+                <a class="navbar-brand text-light font-weight-bold text-monospace text-break" href="#"><h1>Patrick Champagne</h1></a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>    
@@ -28,16 +28,13 @@
                     <form class="form-inline my-2 my-lg-0">
                         <ul class="navbar-nav mr-auto">
                             <li class="nav-item active">
-                                <a class="nav-link text-light" href="#">About <span class="sr-only">(current)</span></a>
+                                <a class="nav-link text-light" href="#about">About <span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item active">
-                                <a class="nav-link text-light" href="#">Languages/Skills <span class="sr-only">(current)</span></a>
+                                <a class="nav-link text-light" href="#languages">Languages/Skills <span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item active">
-                                <a class="nav-link text-light" href="#">Contact <span class="sr-only">(current)</span></a>
-                            </li>
-                            <li class="nav-item active">
-                                <a class="nav-link text-light" href="#">Languages/Skills <span class="sr-only">(current)</span></a>
+                                <a class="nav-link text-light" href="#contact">Contact <span class="sr-only">(current)</span></a>
                             </li>
                         </ul>
                     </form>
@@ -52,7 +49,7 @@
 
     <!--about me-->
         <div class="container-fullwidth">
-            <div class="jumbotron">
+            <div class="jumbotron" id="about">
                     <h1 class="display-4">Hello, world!</h1>
                     <p class="lead">I'm a budding software developer that's passionate about programming.
                         I'm eager to learn the ins and outs of software development, along with everything else that comes with making successful products.
@@ -62,8 +59,6 @@
                     <hr class="my-4">
                     
                     
-                    
-                    
                     <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
                   
             </div>
@@ -71,44 +66,110 @@
     <!--/end about me-->
 
     <!--languages-->
-    <div class="container">
-        <div class="row">
+    <div class="container" id="languages">
+        <div class="row text-center">
             <div class="col-sm">
-                <i class="devicon-html5-plain-wordmark colored display-1"></i></h1>
+                <i class="devicon-html5-plain-wordmark colored display-1"></i>
+                <ul class="list-group list-group-flush text-align-center">
+                    <li class="list-group-item">HTML5</li>
+                    <li class="list-group-item">Visual Studio Code</li>
+                </ul>
+                
             </div>
             <div class="col-sm">
                 <i class="devicon-css3-plain-wordmark display-1"></i>
+                <ul class="list-group list-group-flush text-align-center">
+                    <li class="list-group-item">Bootstrap</li>
+                </ul>
             </div>
             <div class="col-sm">
                 <i class="devicon-javascript-plain colored display-1"></i>
+                <ul class="list-group list-group-flush text-align-center">
+                    <li class="list-group-item">JQuery</li>
+ 
+                </ul>
             </div>
             <div class="col-sm">
                 <i class="devicon-csharp-plain colored display-1"></i>
+                <ul class="list-group list-group-flush text-align-center">
+                    <li class="list-group-item">Visual Studio</li>
+                </ul>
             </div>
         </div>
-        <div class="row">
+        <div class="row text-center">
             <div class="col-sm">
                 <i class="devicon-mysql-plain-wordmark colored display-1"></i>
+                <ul class="list-group list-group-flush text-align-center">
+                    <li class="list-group-item">SQL</li>
+                    <li class="list-group-item">Databases</li>
+                </ul>
             </div>
-            <div class="col-sm">
-                <i class="devicon-github-plain colored display-1"></i>
-            </div>
+            
             <div class="col-sm">
                 <i class="devicon-dot-net-plain-wordmark colored display-1"></i>
+                <ul class="list-group list-group-flush text-align-center">
+                    <li class="list-group-item">More to come...</li>
+                </ul>
             </div>
             <div class="col-sm">
                 <i class="devicon-webpack-plain colored display-1"></i>
+                <ul class="list-group list-group-flush text-align-center">
+                    <li class="list-group-item">More to come</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--end languages-->
+    
+    <!--projects-->
+    <div class="container">
+        <h1 class="m-5 text-center">Projects</h1>
+        <div class="row">
+            <div class="col-4">
+                <div class="list-group" id="list-tab" role="tablist">
+                    <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Project1</a>
+                    <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Project2</a>
+                    <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Project3</a>
+                    <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Project4</a>
+                </div>
+            </div>
+            <div class="col-8">
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">Content to come</div>
+                    <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">More content to come</div>
+                    <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">etc.</div>
+                    <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">etc.</div>
+                </div>
             </div>
         </div>
     </div>
 
+    <!--/end projects-->
+
+
+    <!--contact-->
+
+    <div class="container m-5 text-center" id="contact">
+        <h1 class="m-5 text-center">Contact Me</h1>
+        <div class="row text-center">
+            <div class="col-sm bg-dark text-center text-light">
+                <a href="http://www.github.com/bubblypatrick" target="new"><button type="button" class="btn btn-dark text-light btn-block">Github</button></a>
+            </div>
+            <div class="col-sm text-center">
+                <a href="https://www.linkedin.com/in/patrickrenechampagne/" target="new"><button type="button" class="btn btn-primary text-light btn-block">LinkedIn</button></a>
+            </div>
             
-    <!--end languages-->
+            <!-- <div class="col-sm">
+
+            </div> -->
+        </div>
+        <p class="lead m-5">Email: Patrickrenechampagne@gmail.com</p>
+        <p class="lead">Phone: 530-277-7898</p>
+    </div>
+
+    <!--/end contact-->
 
 
-
-
-    
     
 
 
