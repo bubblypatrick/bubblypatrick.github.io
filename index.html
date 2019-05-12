@@ -52,7 +52,7 @@
         <div class="container-fullwidth">
             <div class="jumbotron" id="about">
                     <h1 class="display-4">Hello, world!</h1>
-                    <p class="lead">I'm a budding software developer that's passionate about programming.
+                    <p class="lead text-justify">I'm a budding software developer that's passionate about programming.
                         I'm eager to learn the ins and outs of software development, along with everything else that comes with making successful products.
                         Before discovering a love for coding, I used computers extensively as an avid freelance audio engineer. 
                         I love meeting and working with new people, and can happily work on my own.
@@ -140,7 +140,7 @@
                 </div>
             </div>
             <div class="col-8">
-                <div class="tab-content" id="nav-tabContent">
+                <div class="tab-content text-center" id="nav-tabContent">
                     <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">Content to come</div>
                     <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">More content to come</div>
                     <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">etc.</div>
@@ -169,8 +169,8 @@
 
             </div> -->
         </div>
-        <p class="lead m-5">Email: Patrickrenechampagne@gmail.com</p>
-        <p class="lead">Phone: 530-277-7898</p>
+        <p class="lead my-4 text-justify">Email: Patrickrenechampagne@gmail.com</p>
+        <p class="lead my-3 text-justify">Phone: 530-277-7898</p>
     </div>
 
     <!--/end contact-->
@@ -188,12 +188,24 @@
 
     <script>
        $(document).ready(function(){
+            var y = $("#about").offset();
+            
             jqueryicon = $("#jquery-icon");
+            jqueryicon.on("click", function() {
+                $("div").fadeOut();
+            })
 
-            jqueryicon.on("click", function(){
-                $(this).hide();
-                alert("I told you I knew jQuery!");
-            });
+            $(document).scroll(function() {
+                if ($(document).scrollTop() > y){
+                    console.log("Go get em tiger");
+                }
+            })
+            
+
+            // jqueryicon.on("click", function(){
+            //     $(this).hide();
+            //     alert("I told you I knew jQuery!");
+            // });
        });
     </script>
   </body>
