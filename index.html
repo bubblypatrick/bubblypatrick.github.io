@@ -169,7 +169,7 @@
 
     <!--contact-->
 
-    <div class="container-fluid" style="background-color: #90c1d7">
+    <div class="container-fluid">
         <div class="container text-center" id="contact">
             <h1 class="m-5 text-center py-3">Contact Me</h1>
             <div class="text-center">
@@ -179,12 +179,11 @@
                 <div class="col-sm bg-primary text-center text-light">
                     <a href="https://www.linkedin.com/in/patrickrenechampagne/" target="new"><button type="button" class="btn btn-primary text-light btn-block">LinkedIn</button></a>
                 </div>
-                
             </div>
+            <br>
+            <p class="text-justify">Email: Patrickrenechampagne@gmail.com<br>Phone: 530-277-7898</p>
+            <br><br>
         </div>
-        <br>
-        <p class="text-justify">Email: Patrickrenechampagne@gmail.com<br>Phone: 530-277-7898</p>
-        <br><br>
     </div>
 
 
@@ -226,11 +225,20 @@
             console.log($aboutHeight);
             var $navbarFadeIn = $about.offset().top;
             //console.log($navbarFadeIn);
+            
 
             $contact.hide();
             $projects.hide();
             $languages.hide();
             $about.hide();
+
+            if ($(window).width() < 500)
+            {
+                $about.show();
+                $languages.show();
+                $projects.show();
+                $about.show();
+            }
 
             $(this).scroll(function() {
                 $offset = $(document).scrollTop();
@@ -248,7 +256,7 @@
                     $contact.fadeIn(3000);
                 }
                 // if ($offset > $navbarFadeIn){
-                //     $('#navbar').css()
+                //     $('#navbar').addClass("bg-dark");
                 // }
             });
 
