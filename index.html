@@ -104,8 +104,8 @@
             </div>
             <div class="row text-center mt-2">
                 <div class="col-sm-4">
-                    <!-- <div class="p-4"><i class="devicon-mysql-plain-wordmark colored display-1"></i></div> -->
-                    <div class="p-4"><i class="devicon-visualstudio-plain colored"></i></div>
+                    <div class="p-4"><i class="devicon-mysql-plain-wordmark colored display-1"></i></div>
+                    <!-- <div class="p-4"><i class="devicon-visualstudio-plain colored"></i></div> -->
 
                     <!-- <div class="p-4"><img class="img-fluid h-50 w-50" src="./images/sql-server.png"></div> -->
                     <!-- To Do, add sql server image instead -->
@@ -146,24 +146,28 @@
                     <div class="col-4">
                         <div class="list-group" id="list-tab" role="tablist">
                             <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Library Database</a>
-                            <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Project2</a>
+                            <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Code First: Entity Framework</a>
                             <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Project3</a>
                             <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Project4</a>
                         </div>
                     </div>
+                    <!-- Project 1 -->
                     <div class="col-8">
                         <div class="tab-content text-center" id="nav-tabContent">
                             <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
                                 <div class="row">
-                                    <p class="col col-8"><a href="https://github.com/bubblypatrick/The-Tech-Academy-SQL-Coding-Projects"><strong>Link</strong></a> to a repository containing a nicely functioning, relational-database with data that I generated.
+                                    <p class="col-8"><a href="https://github.com/bubblypatrick/The-Tech-Academy-SQL-Coding-Projects"><strong>Link</strong></a> to a repository containing a nicely functioning, relational-database with data that I generated.
                                         Included are several stored procedures that are highly stable and modular!
                                     </p>
-
                                     <img class="img-fluid img-responsive w-50 h-50 col-3" src="./images/sql-server.png"><p class="text-center p-4">
-                                </div>
-                                
+                                </div>                                
                             </div>
-                            <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">More content to come</div>
+                            <!-- Project 2 -->
+                            <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
+                                <p class="col-8"><a href="https://github.com/bubblypatrick/The-tech-academy-c-sharp-projects/tree/master/Administrator_Login_Project"><strong>Link</strong></a> to my final C# project where I've 
+                                    created a page with assignable roles such as Admin and Employee. These users have access to unique features for extra control.
+                                </p>
+                            </div>
                             <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">etc.</div>
                             <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">etc.</div>
                         </div>
@@ -253,7 +257,7 @@
                 $offset = $(document).scrollTop();
                 //console.log($offset);
                 if ($offset > $aboutHeight){
-                    $about.fadeIn(1500);
+                    $about.fadeIn(2000);
                 }
                 if ($offset > $languagesHeight){
                     $languages.fadeIn(2000);
