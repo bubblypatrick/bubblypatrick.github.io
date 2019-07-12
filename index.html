@@ -15,11 +15,8 @@
     <body>
     <!-- nav add padding to top? add bg-dark when user scrolls down far enough-->
         <div class="container-fluid">
-            <nav class="navbar navbar-expand-sm navbar-light fixed-top pb-5" id="navbar" style="background-color: transparent;">  
+            <nav class="navbar navbar-expand-sm navbar-light fixed-top pb-0" id="navbar" style="background-color: black;">  
                 <a class="navbar text-light font-weight-bold text-monospace text-break"><h1>Patrick Champagne</h1></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto"></ul>
                     <form class="form-inline my-2 my-lg-0">
@@ -44,7 +41,7 @@
     <!--/end nav -->
     
     <!--background-->
-        <img class="img-fluid" id="background-image" src="./images/dev-black.png" alt="">
+        <img class="img-fluid pt-5" id="background-image" src="./images/dev-black.png" alt="">
     <!--/end background-->
 
     <!--about me-->
@@ -77,8 +74,6 @@
                         <li class="list-group-item">HTML5</li>
                         <li class="list-group-item">Bootstrap</li>
                         <li class="list-group-item">CSS</li>
-                        <li class="list-group-item">Visual Studio Code</li>
-
                     </ul>
                     
                 </div>
@@ -86,7 +81,7 @@
                     <div class="p-4"><i class="devicon-csharp-plain colored display-1"></i></div>
                     <ul class="list-group list-group-flush text-align-center">
                         <li class="list-group-item">MVC</li>
-                        <li class="list-group-item">Entity Frameworks</li>
+                        <li class="list-group-item">Entity Framework</li>
                         <li class="list-group-item">Database Access</li>
                         <li class="list-group-item">Console Programs</li>
                     </ul>
@@ -94,10 +89,8 @@
                 <div class="col-sm-4" id="jquery-icon">
                     <div class="p-4"><i class="devicon-javascript-plain colored display-1"></i></div>
                     <ul class="list-group list-group-flush text-align-center">
-                        <li class="list-group-item">Node.js</li>
+                        <li class="list-group-item">Javascript</li>
                         <li class="list-group-item">jQuery</li>
-                        <li class="list-group-item">AJAX</li>
-                        <li class="list-group-item">React</li>
                     </ul>
                 </div>
                 
@@ -121,15 +114,15 @@
                     <ul class="list-group list-group-flush text-align-center">
                         <li class="list-group-item">ASP.NET</li>
                         <li class="list-group-item">ADO.NET</li>
-                        <li class="list-group-item">.Net Core</li>
-
-
+                        <li class="list-group-item">SignalR</li>
                     </ul>
                 </div>
                 <div class="col-sm-4">
                     <div class="p-4"><i class="devicon-webpack-plain colored display-1"></i></div>
                     <ul class="list-group list-group-flush text-align-center">
-                        <li class="list-group-item">More to come</li>
+                        <li class="list-group-item">GIT</li>
+                        <li class="list-group-item">Package Managers & Minifiers</li>
+
                     </ul>
                 </div>
             </div>
@@ -140,36 +133,45 @@
     <!-- PROJECTS -->
     <!--projects need to add a colored  background here once I've figured out the weird white space problem-->
         <div class="container-fluid border bg-dark">                   
-            <div class="container mb-5 text-white" id="projects">
+            <div class="container mb-5 py-3 text-white" id="projects">
                 <h1 class="m-5 text-center">Projects</h1>
                 <div class="row">
-                    <div class="col-4">
+                    <div class="col-5">
                         <div class="list-group" id="list-tab" role="tablist">
-                            <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Library Database</a>
-                            <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Code First: Entity Framework</a>
-                            <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Project3</a>
-                            <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Project4</a>
+                            <a class="list-group-item list-group-item-action active" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Instant Messenger with SignalR</a>
+                            <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="profile">Code First: Entity Framework</a>
+                            <a class="list-group-item list-group-item-action" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Library Database</a>
+                            <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="settings">Web Application: Entity Framework</a>
                         </div>
                     </div>
-                    <!-- Project 1 -->
-                    <div class="col-8">
+                   
+                    <!-- Project 1 -->                    
+                    <div class="col-7">
                         <div class="tab-content text-center" id="nav-tabContent">
-                            <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
-                                <div class="row">
-                                    <p class="col-8"><a href="https://github.com/bubblypatrick/The-Tech-Academy-SQL-Coding-Projects"><strong>Link</strong></a> to a repository containing a nicely functioning, relational-database with data that I generated.
-                                        Included are several stored procedures that are highly stable and modular!
-                                    </p>
-                                    <img class="img-fluid img-responsive w-50 h-50 col-3" src="./images/sql-server.png"><p class="text-center p-4">
-                                </div>                                
+                            <div class="tab-pane fade show active" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">
+                                    <a href="https://github.com/bubblypatrick/SignalR-Instant-Messenger" target="new"><strong>Here</strong></a> is an instant messaging application that uses websockets to allow instantaneous call and response to a web 
+                                    all while accessing usernames from a database. 
                             </div>
-                            <!-- Project 2 -->
+                   
+                    <!-- Project 2 -->
+                            <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">
+                                    <a href="https://github.com/bubblypatrick/EntityFramework" target="new"><strong>Code-first Entity Framework Database</strong></a> created for Propser IT Solutions to develop a database for a local construction 
+                                    company. This is utilized on a web server throughout the entire application.
+                            </div>
+
+                    <!-- Project 3 -->
+                            <div class="tab-pane fade" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+                                <a href="https://github.com/bubblypatrick/The-Tech-Academy-SQL-Coding-Projects" target="new"><strong>Link</strong></a> to a repository containing a nicely functioning, relational-database with data that I generated.
+                                    Included are several stored procedures that are highly stable and modular!                                                                
+                            </div>
+
+                    <!-- Project 4 -->
                             <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
-                                <p class="col-8"><a href="https://github.com/bubblypatrick/The-tech-academy-c-sharp-projects/tree/master/Administrator_Login_Project"><strong>Link</strong></a> to my final C# project where I've 
+                                <a href="https://github.com/bubblypatrick/The-tech-academy-c-sharp-projects/tree/master/Administrator_Login_Project" target="new"><strong>Link</strong></a> to my final C# project where I've 
                                     created a page with assignable roles such as Admin and Employee. These users have access to unique features for extra control.
-                                </p>
                             </div>
-                            <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">etc.</div>
-                            <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">etc.</div>
+                            
+                            
                         </div>
                     </div>
                 </div>
@@ -245,7 +247,7 @@
             $languages.hide();
             $about.hide();
 
-            if ($(window).width() < 500)                                                            //fixes issues that small screens can't scroll
+            if ($(window).width() < 500 || $('.text-light').on("hover"))                                                            //fixes issues that small screens can't scroll
             {
                 $about.show();
                 $languages.show();
