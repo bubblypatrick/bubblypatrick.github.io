@@ -64,9 +64,9 @@
     <!--/end about me-->
 
     <!--languages-->
-        <div class="container-fluid pb-5" style="background-color: aquamarine" id="languages">
+        <div class="container-fluid pb-5" style="background-color:  #2C2E33" id="languages">
             <div class="container" >
-            <h2 class="text-center pt-5">Languages & Skillsets</h2><br>
+            <h2 class="text-center pt-5 text-monospace text-white">Languages & Skillsets</h2><br>
             <div class="row text-center h-35">
                 <div class="col-sm-4">
                     <div class="p-4"><i class="devicon-html5-plain-wordmark colored display-1"></i></div>
@@ -148,7 +148,7 @@
                     <!-- Project 1 -->                    
                     <div class="col-7">
                         <div class="tab-content text-center" id="nav-tabContent">
-                            <div class="tab-pane fade show active" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">
+                            <div class="tab-pane fade show active align-middle" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">
                                     <a href="https://github.com/bubblypatrick/SignalR-Instant-Messenger" target="new"><strong>Here</strong></a> is an instant messaging application that uses websockets to allow instantaneous call and response to a web 
                                     all while accessing usernames from a database. 
                             </div>
@@ -221,12 +221,12 @@
         $(document).ready(function(){
             
             
-            var $offset = 0;                                                                        //keeps users current scroll position
-            
+            var $offset = 0;                                                                       //keeps users current scroll position
             var $contact = $('#contact');                                                           //get objects for all page sections
             var $projects = $('#projects');
             var $languages = $('#languages');
             var $about = $('#about');
+            var $navbar = $('#navbar');
 
             
 
@@ -258,6 +258,15 @@
             $(this).scroll(function() {                                                             //fade in elements on scroll down
                 $offset = $(document).scrollTop();
                 //console.log($offset);
+                if ($offset > $about.offset().top)
+                {
+                    $navbar.slideUp();
+                }
+                if ($offset < $about.offset().top)
+                {
+                    $navbar.slideDown();
+                }
+
                 if ($offset > $aboutHeight){
                     $about.fadeIn(2000);
                 }
