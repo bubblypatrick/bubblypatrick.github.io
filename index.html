@@ -126,7 +126,7 @@
     <!-- PROJECTS -->
     <!--projects need to add a colored  background here once I've figured out the weird white space problem-->
         <div class="container-fluid border bg-dark">                   
-            <div class="container mb-5 pb-3 pt-1 text-white" id="projects">
+            <div class="container mb-5 mt-4 pb-3 pt-1 text-white" id="projects">
                 <h2 class="m-5 text-center">Projects</h2>
                 <div class="row">
                     <div class="col-5">
@@ -249,7 +249,7 @@
             $(this).scroll(function() {
                 $offset = $(document).scrollTop();
                 //console.log($offset);
-                if ($offset > $about.offset().top)
+                if ($offset > $about.offset().top + 100)
                 {
                     $navbar.slideUp();
                 }
