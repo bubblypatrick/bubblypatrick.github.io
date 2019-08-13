@@ -15,7 +15,7 @@
     <body>
     <!-- nav add padding to top? add bg-dark when user scrolls down far enough-->
         <div class="container-fluid">
-            <nav class="navbar navbar-expand-sm navbar-light fixed-top pb-0" id="navbar">  
+            <nav class="navbar navbar-expand-sm navbar-light fixed-top pb-0" id="navbar" onmouseover="showSections()">  
                 <a class="navbar text-light font-weight-bold text-monospace text-break"><h1>Patrick Champagne</h1></a>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto"></ul>
@@ -47,13 +47,12 @@
     <!--about me-->
         <div class="container-fullwidth mb-0">
             <div class="jumbotron mb-0" id="about">
-                <div class="container">
-                    <h1 class="display-4">Hello, world!</h1>
-                    <p class="lead text-justify">I'm a software developer that's passionate about programming. 
-                        Before discovering a love for coding, I used computers extensively as an avid freelance audio engineer.
-                        I love meeting and working with new people, and happily work on my own as well.
+                <div class="container" id="jumbotron">
+                    <h1 class="display-4">Hello, World!</h1>
+                    <p class="lead text-justify">I'm a software developer who's passionate about programming and learning. 
+                        I love meeting and working with new people, and can also happily work on my own. 
                         Please feel free to look at some of my projects listed below. I'm always interested in hearing about any 
-                        employment inquiries!                         
+                        employment inquiries!
                     </p>
                     <hr class="m-4 mb-0">
                     
@@ -209,33 +208,43 @@
             //keeps users current scroll position
             var $offset = 0;             
             //get objects for all page sections                                                          
-            var $contact = $('#contact');                                                           
-            var $projects = $('#projects');
-            var $languages = $('#languages');
-            var $about = $('#about');
             var $navbar = $('#navbar');
+            var $about = $('#about');
+            var $languages = $('#languages');
+            var $projects = $('#projects');
+            var $contact = $('#contact');                                           
 
             //get sections heights from top of page
-            var $contactHeight = ($contact.offset().top / 10);                                      
-            var $projectsHeight = $projects.offset().top / 2;
-            var $languagesHeight = $languages.offset().top / 2.5;
             var $aboutHeight = ($about.offset().top / 10);
-            var $navbarFadeIn = $about.offset().top;
+            var $languagesHeight = $languages.offset().top / 3;
+            var $projectsHeight = $projects.offset().top / 2;
+            var $contactHeight = ($contact.offset().top / 2);                                      
             
-            $contact.hide();                                                                        //hide sections to be revealed on scrolldown
+            //hide sections to be revealed on scrolldown
+            $contact.hide();                                                                        
             $projects.hide();
             $languages.hide();
             $about.hide();
+            //$('#jumbotron').hide();
+
 
             //to fix bookmark bar not going if offset hadn't been loaded
-            if ($(window).width() < 500 || $('.text-light').on("hover"))                                                            //fixes issues that small screens can't scroll
-            {
+            // if ($(window).width() < 500 || $('.text-light').on("hover"))       
+            document.getElementById("navbar").onmouseover = function(){
                 $about.show();
                 $languages.show();
                 $projects.show();
                 $about.show();
             }
 
+            if ($(window).height())
+            if ($(window).width() < 500)                                    
+            {
+                $about.show();
+                $languages.show();
+                $projects.show();
+                $about.show();
+            }
             //fade in elements on scroll down
             $(this).scroll(function() {
                 $offset = $(document).scrollTop();
@@ -248,20 +257,18 @@
                 {
                     $navbar.slideDown();
                 }
-                if ($offset > $aboutHeight){
-                    $about.fadeIn(6000);
+                if ($offset > $aboutHeight -100){
+                    //$("jumbotron").show();
+                    $about.fadeIn(4000);
                 }
                 if ($offset > $languagesHeight){
-                    $languages.fadeIn(2000);
+                    $languages.fadeIn(4000);
                 }
                 if ($offset > $projectsHeight){
-                    $projects.fadeIn(1500);
+                    $projects.fadeIn(4000);
                 }
                 if ($offset > $contactHeight){
                     $contact.fadeIn(3000);
-                }
-                if ($offset > $navbarFadeIn){
-                    $('#navbar').css('backround-color', 'black');
                 }
             });
         });
