@@ -45,17 +45,16 @@
     <!--/end background-->
 
     <!--about me-->
-        <div class="container-fullwidth mb-0">
-            <div class="jumbotron mb-0" id="about">
+        <div class="container-fullwidth mb-0" id="about">
+            <div class="jumbotron mb-0">
                 <div class="container" id="jumbotron">
                     <h1 class="display-4">Hello, World!</h1>
-                    <p class="lead text-justify">I'm a software developer in Portland, Oregon. I'm also a recording engineer and enthusiastic home chef! My method of operation is to get things
-                        I'm currently looking for a great company to work for
+                    <p class="lead text-justify">I'm a software developer in Portland, Oregon. I may be seem like I lack experience but I am so incredibly passionate about programming! I've dedicated several hours a day for the last two years learning the ins-and-outs of computer science, object oriented programming, and full-stack development. I just can't get enough of it! I'm also a recording engineer and enthusiastic home chef! I'm a friendly, hard-working and well rounded person, and I'm currently looking for a great company to work for!
                     </p>
                     <hr class="m-4 mb-0">
                     
                     
-                    <p class="text-center ">Below are some of my recent projects.</p>
+                    <p class="text-center ">Here are some of my recent projects.</p>
                 </div>
             </div>
         </div>    
@@ -113,22 +112,23 @@
     <!--languages-->
         <div class="container-fluid pb-5" id="languages">
             <div class="container">
-                <h2 class="text-center pt-5 text-monospace text-white">Languages & Skillsets</h2><br>
+                <h2 class="text-center pt-5 text-monospace text-white">Languages &amp; Skillsets</h2><br>
                 <div class="row text-center h-35">
-                    <div class="col-sm-4">
-                        <div class="p-4"><i class="devicon-html5-plain-wordmark colored display-1"></i></div>
-                        <ul class="list-group list-group-flush text-align-center">
-                            <li class="list-group-item">HTML5</li>
-                            <li class="list-group-item">Bootstrap</li>
-                            <li class="list-group-item">CSS</li>
-                        </ul>
-                    </div>
+                    
                     <div class="col-sm-4">
                         <div class="p-4"><i class="devicon-csharp-plain colored display-1"></i></div>
                         <ul class="list-group list-group-flush text-align-center">
                             <li class="list-group-item">.NET </li>
                             <li class="list-group-item">Core</li>
                             <li class="list-group-item">C#</li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="p-4"><i class="devicon-mysql-plain-wordmark colored display-1"></i></div>
+                        <ul class="list-group list-group-flush text-align-center">
+                            <li class="list-group-item">SQL Server</li>
+                            <li class="list-group-item">MySQL</li>
+                            <li class="list-group-item">ADO.NET</li>
                         </ul>
                     </div>
                     <div class="col-sm-4" id="jquery-icon">
@@ -141,20 +141,21 @@
                     </div>
                 </div>
                 <div class="row text-center mt-2">
-                    <div class="col-sm-4">
-                        <div class="p-4"><i class="devicon-mysql-plain-wordmark colored display-1"></i></div>
-                        <ul class="list-group list-group-flush text-align-center">
-                            <li class="list-group-item">SQL Server</li>
-                            <li class="list-group-item">MySQL</li>
-                            <li class="list-group-item">ADO.NET</li>
-                        </ul>
-                    </div>
+                    
                     <div class="col-sm-4">
                         <div class="p-4"><i class="devicon-dot-net-plain-wordmark colored display-1"></i></div>
                         <ul class="list-group list-group-flush text-align-center">
                             <li class="list-group-item">ASP.NET</li>
                             <li class="list-group-item">SignalR</li>
                             <li class="list-group-item">Entity</li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="p-4"><i class="devicon-html5-plain-wordmark colored display-1"></i></div>
+                        <ul class="list-group list-group-flush text-align-center">
+                            <li class="list-group-item">HTML5</li>
+                            <li class="list-group-item">Bootstrap</li>
+                            <li class="list-group-item">CSS</li>
                         </ul>
                     </div>
                     <div class="col-sm-4">
@@ -204,76 +205,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     
-    <script>
-        $(document).ready(function(){
-            //keeps users current scroll position
-            var $offset = 0;             
-            //get objects for all page sections                                                          
-            var $navbar = $('#navbar');
-            var $about = $('#about');
-            var $languages = $('#languages');
-            var $projects = $('#projects');
-            var $contact = $('#contact');                                           
-
-            //get sections heights from top of page
-            var $aboutHeight = ($about.offset().top / 10);
-            var $languagesHeight = $languages.offset().top / 3;
-            var $projectsHeight = $projects.offset().top / 2;
-            var $contactHeight = ($contact.offset().top / 2);                                      
-            
-            //hide sections to be revealed on scrolldown
-//            $contact.hide();                                                                        
-//            $projects.hide();
-//            $languages.hide();
-//            $about.hide();
-            //$('#jumbotron').hide();
-
-
-            //to fix bookmark bar not going if offset hadn't been loaded
-            // if ($(window).width() < 500 || $('.text-light').on("hover"))       
-            document.getElementById("navbar").onmouseover = function(){
-                $about.show();
-                $languages.show();
-                $projects.show();
-                $about.show();
-            }
-
-            if ($(window).height())
-            if ($(window).width() < 500)                                    
-            {
-                $about.show();
-                $languages.show();
-                $projects.show();
-                $about.show();
-            }
-            //fade in elements on scroll down
-            $(this).scroll(function() {
-                $offset = $(document).scrollTop();
-                //console.log($offset);
-                if ($offset > $about.offset().top + 100)
-                {
-                    $navbar.slideUp('fast');
-                }
-                if ($offset < $about.offset().top)
-                {
-                    $navbar.slideDown('fast');
-                }
-                if ($offset > $aboutHeight -100){
-                    //$("jumbotron").show();
-                    $about.fadeIn(4000);
-                }
-                if ($offset > $languagesHeight){
-                    $languages.fadeIn(4000);
-                }
-                if ($offset > $projectsHeight){
-                    $projects.fadeIn(4000);
-                }
-                if ($offset > $contactHeight){
-                    $contact.fadeIn(3000);
-                }
-            });
-        });
-     </script>
+        
+    <script type="text/javascript" src="scripts/main.js"></script>
     
   </body>
 </html>
