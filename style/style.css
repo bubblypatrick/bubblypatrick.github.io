@@ -1,11 +1,15 @@
 body {
-    background-color: #2C2E33;
+    background-color: black;
     margin: 0;
     padding: 0;
 }
 
 #navbar {
     background-color: black;
+}
+
+#name {
+    font-size: 30px;
 }
 
 #languages {
