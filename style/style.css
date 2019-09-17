@@ -12,11 +12,20 @@ body {
     font-size: 33px;
 }
 
-
 #languages {
     background-color: #2C2E33
 }
 
 #contact {
     background-color: #FCFCFC;
+}
+
+.jumbotron {
+    min-height: 500px;
+}
+
+.list-group-item {
+    width: 220px;
+    margin:auto;
+    font-size: 18px
 }
