@@ -4,19 +4,19 @@
     <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-       
     <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
         <link rel="stylesheet" href="style/style.css">
-        
         <title>Patrick Champagne's Developer Site</title>
     </head>
     <body>
-    <!-- nav add padding to top? add bg-dark when user scrolls down far enough-->
+        <!-- NAV -->
         <div class="container-fluid">
             <nav class="navbar navbar-expand-sm navbar-light fixed-top pb-0" id="navbar" onmouseover="showSections()">  
-                <a class="navbar text-light font-weight-bold text-monospace text-break"><h1 id="name">Patrick Champagne</h1></a>
+                <a class="navbar text-light font-weight-bold text-monospace text-break">
+                    <h1 id="name">Patrick Champagne</h1>
+                </a>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto"></ul>
                     <form class="form-inline my-2 my-lg-0">
@@ -39,75 +39,96 @@
             </nav>
         </div>
     <!--/end nav -->
-    
-    <!--background-->
+    <!--BACKGROUND-->
         <img class="img-fluid pt-5" id="background-image" src="./images/dev-black.png" alt="">
-    <!--/end background-->
+    <!--/END TOP SECTION -->
 
-    <!--about me-->
-        <div class="container-fullwidth mb-0 " id="about">
+    <!--ABOUT ME-->
+        <div class="container-fullwidth" id="about">
             <div class="jumbotron mb-0">
                 <div class="container" id="jumbotron">
                     <h1 class="display-4">Hello, World!</h1>
-                    <p class="lead text-justify">I'm a software developer in Portland, Oregon. I'm extremely passtionate about the ins-and-outs of computer science and application development. I'm also a recording engineer and enthusiastic home chef! I'm a currently looking for a great company to work for!
+                    <p class="lead text-justify">I'm a software developer in Portland, Oregon. I'm 
+                        extremely passtionate about the ins-and-outs of computer science and application 
+                        development. I pride myself in developing in best practices by implementing 
+                        well thought out, decoupled and easy to read code. I'm comfortable in both front 
+                        and back end technologies, and love learning new technologies. Seeing how 
+                        it all fits together comes naturally to me, from data structures to software 
+                        architecture I'm a huge fan of it all =)
+                        <br><br>
+                        My software stack includes strong .NET and Javascript technologies, multiple 
+                        databases, and several design patterns. I am comfortable in new and old software 
+                        frameworks alike. Another strength of mine is my ability to communicate effectively and 
+                        calmly, even in stressful environments. 
+                        <br><br>
+                        I'm also a distinguished recording engineer (specializing in hip-hop), as well as 
+                        an enthusiastic home chef. Me, my girlfriend and my cat love whipping up new 
+                        dishes in the kitchen. <strong>Please feel free to check out some of my
+                        recent software projects listed below!</strong>
                     </p>
-                    <hr class="m-4 mb-0">
-                    <p class="text-center pt-5">Here are some of my recent projects.</p>
                 </div>
             </div>
         </div>    
     <!--/end about me-->
 
 <!-- PROJECTS -->
-    <!--projects need to add a colored  background here once I've figured out the weird white space problem-->
         <div class="container-fluid border bg-dark text-center">                   
             <div class="container-fluid" id="projects">
                 <h2 class="text-center pt-5 text-monospace text-white">Projects</h2>
                 <div class="row my-5">
-                    <div class="col-4">
-                        <div class="list-group" id="list-tab" role="tablist">
+                    <div class="col-4 pl-0">
+                        <div class="list-group"id="list-tab" role="tablist">
                             <a class="list-group-item list-group-item-action active" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Instant Messenger</a>
                             <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="profile">Code First: Entity Framework</a>
                             <a class="list-group-item list-group-item-action" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Relational Library Database</a>
                             <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="settings">Web Application: Entity Framework</a>
                         </div>
                     </div>
-                   
+                    
                     <!-- Project 1 -->                    
                     <div class="col-8 align-middle">
                         <div class="tab-content text-center py-5" id="nav-tabContent">
                             <div class="tab-pane fade show text-white active" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">
-                                    <a href="https://github.com/bubblypatrick/SignalR-Instant-Messenger" target="new"><strong>Here</strong></a> is an instant messaging application that uses websockets to allow instantaneous call and response to a web 
-                                    all while accessing usernames from a database. 
+                                    <a href="https://github.com/bubblypatrick/SignalR-Instant-Messenger" target="new"><strong>An instant messenger</strong></a> 
+                                    implemented with Microsoft's SignalR technology. The server maintains a constant connection to clients 
+                                    using websockets. When a client sends a message to another client, the server calls javascript functions 
+                                    on both clients computers to sync messages.
+                                    <br><br>
+                                    All new messages are stored in a database, and displayed upon load via a select query.
                             </div>
-                   
                     <!-- Project 2 -->
-                            <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">
+                            <div class="tab-pane fade text-white" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">
                                     <a href="https://github.com/bubblypatrick/EntityFramework" target="new"><strong>Code-first Entity Framework Database</strong></a> created for Propser IT Solutions to develop a database for a local construction 
                                     company. This is utilized on a web server throughout the entire application.
                             </div>
-
                     <!-- Project 3 -->
-                            <div class="tab-pane fade" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
-                                <a href="https://github.com/bubblypatrick/The-Tech-Academy-SQL-Coding-Projects" target="new"><strong>Link</strong></a> to a repository containing a nicely functioning, relational-database with data that I generated.
-                                    Included are several modular stored procedures.                                                                
+                            <div class="tab-pane fade text-white" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+                                <a href="https://github.com/bubblypatrick/The-Tech-Academy-SQL-Coding-Projects" target="new">
+                                    <strong>Link</strong></a> to a repository containing a relational-database statement that will generate 
+                                    a simulated library. The database includes nine tables, with some being "Books", "Branches", 
+                                    "Members", "Authors", and "Publishers".
+                                    <br><br>
+                                    Included are several stored procedures that can return all books from 
+                                    an author, return all checked out books by a member, and display which branches have a specific book checked in.
                             </div>
-
                     <!-- Project 4 -->
-                            <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
-                                <a href="https://github.com/bubblypatrick/The-tech-academy-c-sharp-projects/tree/master/Administrator_Login_Project" target="new"><strong>Link</strong></a> to my final C# project where I've 
-                                    created a page with assignable roles such as Admin and Employee. These users have access to unique features for extra control.
+                            <div class="tab-pane fade text-white" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
+                                <a href="https://github.com/bubblypatrick/The-tech-academy-c-sharp-projects/tree/master/
+                                    Administrator_Login_Project" target="new">
+                                    <strong>Here</strong></a> is a C# MVC5 web application 
+                                    that interacts with a database to perform CRUD operations using Entity Framework. Only users 
+                                    that have the "Admin" role can access panels to perform create, update and delete applications, 
+                                    while every user can use Select operations.
                             </div>   
                         </div>
                     </div>
                 </div>
             </div>     
         </div>
+    <!--/END PROJECTS-->
 
-    <!--/end projects-->
 
-        
-    <!--languages-->
+    <!--LANGUAGES-->
         <div class="container-fluid pb-5" id="languages">
             <div class="container">
                 <h2 class="text-center pt-5 text-monospace text-white">Languages &amp; Skillsets</h2><br>
