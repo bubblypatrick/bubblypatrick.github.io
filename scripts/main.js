@@ -19,7 +19,7 @@ $(document).ready(function(){
     $(this).scroll(function() {
         $offset = $(document).scrollTop();
         //console.log($offset);
-        if ($offset > $about.offset().top + 50)
+        if ($offset > $about.offset().top + 10)
         {
             $navbar.slideUp('fast');
         }
