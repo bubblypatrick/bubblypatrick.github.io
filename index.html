@@ -88,17 +88,28 @@
                 <div class="row my-5">
                     <div class="col-4 pl-0">
                         <div class="list-group"id="list-tab" role="tablist">
-                            <a class="list-group-item list-group-item-action active" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Instant Messenger</a>
+                            <a class="list-group-item list-group-item-action active" id="list-messages-list" data-toggle="list" href="#rustlings" role="tab" aria-controls="rustlings">&#129408; Rustlings</a>
+                            <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Instant Messenger</a>
                             <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="profile">Code First: Entity Framework</a>
                             <a class="list-group-item list-group-item-action" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Relational Library Database</a>
                             <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="settings">Web Application: Entity Framework</a>
                         </div>
                     </div>
                     
-                    <!-- Project 1 -->                    
+
+
                     <div class="col-8 align-middle">
                         <div class="tab-content text-center py-5" id="nav-tabContent">
-                            <div class="tab-pane fade show text-white active" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">
+                    <!-- Project 0 -->
+                            <div class="tab-pane fade show text-white active" id="rustlings" role="tabpanel" aria-labelledby="list-messages-list">
+                                <a href="https://github.com/bubblypatrick/rustlings" target="new"><strong>Rustlings &#129408;</strong></a> 
+                                is a collection of 100+ small exercises that displays compentence with most facets of the Rust programming language.
+                                This includes understanding of ownership, cargo, threads, signals, enums/matching, and making the compiler happy.
+                                <br><br>
+                                If you've never checked it out, I highly recommend it as step 2 in onboarding someone to the language, after reading The Rust Book.
+                            </div>
+                    <!-- Project 1 -->
+                            <div class="tab-pane fade text-white" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">
                                     <a href="https://github.com/bubblypatrick/SignalR-Instant-Messenger" target="new"><strong>An instant messenger</strong></a> 
                                     implemented with Microsoft's SignalR technology. The server maintains a constant connection to clients 
                                     using websockets. When a client sends a message to another client, the server calls javascript functions 
@@ -196,7 +207,7 @@
                 </div>
             </div>
             <div class="container text-center pt-5">
-                ^ I left this last little section with the icons in because I think it's cute :)
+                ^ I left this last little (legacy) section with the icons in because I think it's cute :)
             </div>
         </div>
     <!--end languages-->
