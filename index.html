@@ -89,10 +89,10 @@
                     <div class="col-4 pl-0">
                         <div class="list-group"id="list-tab" role="tablist">
                             <a class="list-group-item list-group-item-action active" id="list-messages-list" data-toggle="list" href="#rustlings" role="tab" aria-controls="rustlings">&#129408; Rustlings</a>
+                            <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#freelance" role="tab" aria-controls="freelance">Freelance</a>
                             <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Instant Messenger</a>
                             <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="profile">Code First: Entity Framework</a>
                             <a class="list-group-item list-group-item-action" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Relational Library Database</a>
-                            <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="settings">Web Application: Entity Framework</a>
                         </div>
                     </div>
                     
@@ -107,6 +107,15 @@
                                 This includes understanding of ownership, cargo, threads, signals, enums/matching, and making the compiler happy.
                                 <br><br>
                                 If you've never checked it out, I highly recommend it as step 2 in onboarding someone to the language, after reading The Rust Book.
+                            </div>
+                    <!-- Project 1 -->
+                            <div class="tab-pane fade text-white" id="freelance" role="tabpanel" aria-labelledby="list-messages-list">
+                                <a href="https://lemongrasschiropractic.com/" target="new"><strong>Here is a NextJS site</strong></a> 
+                                I created for a chiropractic business. I designed the site to fully statically compile, which allowed it to be fully hosted
+                                in S3 served by AWS Cloudfront. It is also using Google's Material UI component library.
+                                <br><br>
+                                The static nature of the site allowed me to take advantage of NextJS' automatic image resizing and speed optimizations (ranking at 99% in Google Lighthouse),
+                                while allowing the site to be hosted for less than a cent a month. The company was later successfully sold, and I facilitated the site transfer.  
                             </div>
                     <!-- Project 1 -->
                             <div class="tab-pane fade text-white" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">
@@ -132,15 +141,6 @@
                                     Included are several stored procedures that can return all books from 
                                     an author, return all checked out books by a member, and display which branches have a specific book checked in.
                             </div>
-                    <!-- Project 4 -->
-                            <div class="tab-pane fade text-white" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
-                                <a href="https://github.com/bubblypatrick/The-tech-academy-c-sharp-projects/tree/master/
-                                    Administrator_Login_Project" target="new">
-                                    <strong>Here</strong></a> is a C# MVC5 web application 
-                                    that interacts with a database to perform CRUD operations using Entity Framework. Only users 
-                                    that have the "Admin" role can access panels to perform create, update and delete applications, 
-                                    while every user can use Select operations.
-                            </div>   
                         </div>
                     </div>
                 </div>
